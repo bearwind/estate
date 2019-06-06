@@ -1,4 +1,4 @@
-package com.novawind.estate.config.interceptor;
+package com.novawind.estate.web.interceptor;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class WebInterceptor {
     private static final Logger logger = LoggerFactory.getLogger(WebInterceptor.class);
 
-    @Around("execution(* com.novawind.estate.controller..*(..))")
+    @Around("execution(* com.novawind.estate.web.controller..*(..))")
     public Object afterException(ProceedingJoinPoint pjp){
         //MethodSignature ms = (MethodSignature)pjp.getSignature();
         Object[] args = pjp.getArgs();
