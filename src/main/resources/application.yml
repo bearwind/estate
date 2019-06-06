@@ -1,0 +1,31 @@
+#server
+server:
+  port: 9999
+  servlet:
+    context-path: /estate
+#  error:
+#    whitelabel:
+#      enabled: false
+#config
+spring:
+  #favicon
+  mvc:
+    favicon:
+      enabled: false
+  #thymeleaf
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    #Allow Thymeleaf templates to be reloaded at dev time
+    cache: false
+    servlet:
+      content-type:
+  messages:
+    basename: message/app
+  #mysql
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/estate?characterEncoding=utf-8&useSSL=true
+    name: mysql
+    username: root
+    password: root
