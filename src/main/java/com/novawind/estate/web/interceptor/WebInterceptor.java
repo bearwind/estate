@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
+ * 统一拦截器
+ *
  * @author Jeremy Xiong<br>
  * 2018-02-26 17:00
  */
@@ -18,7 +20,6 @@ public class WebInterceptor {
 
     @Around("execution(* com.novawind.estate.web.controller..*(..))")
     public Object afterException(ProceedingJoinPoint pjp){
-        //MethodSignature ms = (MethodSignature)pjp.getSignature();
         Object[] args = pjp.getArgs();
         Object _return = null;
         try{
